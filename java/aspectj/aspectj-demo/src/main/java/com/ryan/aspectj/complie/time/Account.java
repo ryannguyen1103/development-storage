@@ -1,4 +1,4 @@
-package com.ryan.aspectj;
+package com.ryan.aspectj.complie.time;
 
 /**
  *
@@ -6,13 +6,14 @@ package com.ryan.aspectj;
  */
 public class Account {
 
-    int balance = 20;
+    public int balance = 20;
 
     public boolean withdraw(int amount) {
         if (balance < amount) {
             return false;
         }
         balance = balance - amount;
+        System.out.println("Balance after withdrawal: " + balance);
         return true;
     }
 }
